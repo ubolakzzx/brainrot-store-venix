@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brainrot Store</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a1f44, #1e3a8a, #0a1f44);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: rgba(20, 40, 90, 0.85);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px #0af;
+  }
+
+  nav {
+    background: rgba(30, 50, 100, 0.9);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+
+  nav button {
+    background: transparent;
+    border: 2px solid #0af;
+    color: #0af;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  nav button:hover,
+  nav button.active {
+    background: #0af;
+    color: #022;
+    box-shadow: 0 0 10px #0af;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(15, 25, 55, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 20px #0a3;
+  }
+
+  h2 {
+    color: #7de;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 4px #09f;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+
+  th, td {
+    border: 1px solid #0af;
+    padding: 0.8rem 1rem;
+    text-align: left;
+  }
+
+  th {
+    background: #07326a;
+    color: #7de;
+  }
+
+  td {
+    background: rgba(0, 0, 50, 0.5);
+  }
+
+  footer {
+    background: rgba(20, 40, 90, 0.85);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+    box-shadow: inset 0 1px 3px #0af;
+  }
+
+  .discord-btn {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 0.7rem 2rem;
+    background: #5865F2;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #5865F2;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .discord-btn:hover {
+    background: #4752c4;
+    box-shadow: 0 0 15px #4752c4;
+  }
+
+  .note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #a3c4f3;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+<header>Brainrot Store</header>
+
+<nav>
+  <button id="btn-gods" class="active" onclick="showCategory('gods')">Brainrots Gods</button>
+  <button id="btn-secretos" onclick="showCategory('secretos')">Secretos</button>
+</nav>
+
+<main>
+  <section id="gods" class="category">
+    <h2>Brainrots Gods</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Detalhes</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cocofanto Elefanto</td><td>10k/s</td><td>R$ 0,40</td></tr>
+        <tr><td>Girafa-Celestre</td><td>20k/s</td><td>R$ 0,65</td></tr>
+        <tr><td>Tralalero Tralala</td><td>50k/s</td><td>R$ 1,00</td></tr>
+        <tr><td>Odin din dun</td><td>75k/s</td><td>R$ 1,35</td></tr>
+        <tr><td>Trenostruzzo Turbo 3000</td><td>150k/s</td><td>R$ 2,75</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="secretos" class="category" style="display:none;">
+    <h2>Secretos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Detalhes</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>La Vaca Saturno Saturnita</td><td>De 250k até 2.5m/s</td><td>R$ 2,00</td></tr>
+        <tr><td>Chimpanzini Spyderini</td><td>300k/s</td><td>R$ 3,50</td></tr>
+        <tr><td>Los Tralalelitos</td><td>500k/s</td><td>R$ 5,00</td></tr>
+        <tr><td>Las Tralalelitas</td><td>650k/s</td><td>R$ 6,50</td></tr>
+        <tr><td>Graipuss Medussi</td><td>1m/s</td><td>R$ 10,00</td></tr>
+        <tr><td>Pot Hotspot</td><td>2.5m/s</td><td>R$ 13,50</td></tr>
+        <tr><td>La Grande Combinasión</td><td>10m/s</td><td>R$ 25,00</td></tr>
+        <tr><td>Garama and Madundung</td><td>50m/s</td><td>R$ 40,00</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <a href="https://discord.gg/seulinkdiscord" target="_blank" class="discord-btn">Entrar no Discord</a>
+
+  <p class="note">
+    <strong>Importante:</strong> Não fazemos reembolso.<br>
+    Pedidos feitos pelo site podem demorar até 2 dias para serem entregues.<br>
+    Pedidos feitos pelo Discord têm prazo de até 5 horas.
+  </p>
+</main>
+
+<footer>
+  &copy; 2025 Brainrot Store - Todos os direitos reservados
+</footer>
+
+<script>
+  function showCategory(cat) {
+    document.querySelectorAll('.category').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(cat).style.display = 'block';
+
+    document.querySelectorAll('nav button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    if (cat === 'gods') {
+      document.getElementById('btn-gods').classList.add('active');
+    } else if (cat === 'secretos') {
+      document.getElementById('btn-secretos').classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
